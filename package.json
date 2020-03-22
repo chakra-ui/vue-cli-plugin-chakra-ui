@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-chakra-ui-vue",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Adds and setups Chakra UI Vue in your Vue CLI created Vue project",
   "main": "index.js",
   "scripts": {
