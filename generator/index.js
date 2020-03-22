@@ -10,6 +10,10 @@ module.exports = (api, options) => {
         api.entryFile,
         `import Chakra from '@chakra-ui/vue'`
     );
+
+    api.render('./template', {
+        hasVueRouter: options.hasVueRouter
+    })
     api.onCreateComplete(() => {
         let vueUseLine = `\n\nVue.use(Chakra)`
 

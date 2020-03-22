@@ -1,13 +1,11 @@
 <template>
   <ThemeProvider>
     <CSSReset />
-    <!-- Uncomment below line if you are using vue-router -->
-
-    <!-- <router-view /> -->
-
-    <!--
-        Or just get started adding Chakra UI components
-    -->
+    <%_ if (hasVueRouter) { _%>
+    <router-view />
+    <%_ } else { _%>
+    <!--Your application goes here -->
+    <%_ } _%>
   </ThemeProvider>
 </template>
 
