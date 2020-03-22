@@ -1,0 +1,31 @@
+{
+  "name": "vue-cli-plugin-chakra-ui-vue",
+  "version": "0.1.0",
+  "description": "Adds and setups Chakra UI Vue in your Vue CLI created Vue project",
+  "main": "index.js",
+  "scripts": {
+    "test": "null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominusKelvin/vue-cli-plugin-chakra-ui-vue.git"
+  },
+  "bugs": "https://github.com/DominusKelvin/vue-cli-plugin-chakra-ui-vue/issues",
+  "homepage": "https://github.com/DominusKelvin/vue-cli-plugin-chakra-ui-vuee#readme",
+  "author": "Kelvin Omereshone <kelvinomereshone@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "cli",
+    "vue-cli",
+    "ui",
+    "design-system",
+    "vue-components",
+    "uikit",
+    "accessible",
+    "components",
+    "emotion",
+    "library",
+    "styled-system"
+  ]
+}
