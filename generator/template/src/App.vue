@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { ThemeProvider, CSSReset } from "@chakra-ui/core";
+import { ThemeProvider, CSSReset } from "@chakra-ui/vue";
 
 export default {
   name: "App",
