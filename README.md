@@ -1,4 +1,4 @@
-# vue-cli-plugin-chakra-ui-vue
+# vue-cli-plugin-chakra-ui
 
 > This plugin setups Chakra UI Vue in your Vue CLI generated project.
 
@@ -6,5 +6,5 @@
 Install this plugin by running
 
 ``` sh
-vue add chakra-ui-vue
+vue add chakra-ui
 ```
