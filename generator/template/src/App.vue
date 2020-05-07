@@ -1,22 +1,22 @@
 <template>
-  <ThemeProvider>
-    <CSSReset />
+  <c-theme-provider>
+    <c-reset />
     <%_ if (hasVueRouter) { _%>
     <router-view />
     <%_ } else { _%>
     <!--Your application goes here -->
     <%_ } _%>
-  </ThemeProvider>
+  </c-theme-provider>
 </template>
 
 <script>
-import { ThemeProvider, CSSReset } from "@chakra-ui/vue";
+import { CThemeProvider, CReset } from "@chakra-ui/vue";
 
 export default {
   name: "App",
   components: {
-    ThemeProvider,
-    CSSReset
+    CThemeProvider,
+    CReset
   }
 };
 </script> 
