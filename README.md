@@ -29,3 +29,7 @@ To install the chakra-ui plugin simply navigate to your application's folder and
 ```
 vue add chakra-ui
 ```
+
+The plugin would install [`@chakra-ui/vue`](https://vue.chakra-ui.com) and it's peer dependency - [Emotion](https://emotion.sh)
+
+It would also touch `main.js` and `App.vue` to set up your project for consumption of Chakra UI components.
