@@ -1,7 +1,7 @@
 module.exports = (api, options) => {
   api.extendPackage({
     dependencies: {
-      '@chakra-ui/vue': '^0.5.3',
+      '@chakra-ui/vue': '^0.5.5',
       emotion: '^10.0.27',
     },
   });
