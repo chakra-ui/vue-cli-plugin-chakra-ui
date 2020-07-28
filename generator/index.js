@@ -1,3 +1,6 @@
+const addChakraLoaderConfig = require('./helpers/add-chakra-loader-config');
+const registerChakraVuePlugin = require('./helpers/register-chakra-vue-plugin');
+
 module.exports = (api, options) => {
   api.extendPackage({
     dependencies: {
@@ -6,29 +9,29 @@ module.exports = (api, options) => {
     },
   });
 
+  if (options.addChakraLoader) {
+    api.extendPackage({
+      devDependencies: {
+        'chakra-loader': '^1.0.2'
+      }
+    })
+  }
+
   api.injectImports(api.entryFile, `import Chakra from '@chakra-ui/vue'`);
 
   api.render('./template', {
     hasVueRouter: options.hasVueRouter,
+    hasChakraLoader: options.addChakraLoader
   });
   api.onCreateComplete(() => {
-    let vueUseLine = `\n\nVue.use(Chakra)`;
 
-    const fs = require('fs');
+    registerChakraVuePlugin(api);
 
-    let contentMain = fs.readFileSync(api.entryFile, { encoding: 'utf-8' });
-
-    const lines = contentMain.split(/\r?\n/g).reverse();
-
-    const lastImportIndex = lines.findIndex((line) => line.match(/^import/));
-
-    lines[lastImportIndex] += vueUseLine;
-
-    // modify app
-    contentMain = lines.reverse().join('\n');
-
-    fs.writeFileSync(api.entryFile, contentMain, { encoding: 'utf-8' });
+    if (options.addChakraLoader) {
+      addChakraLoaderConfig(api);
+    }
   });
 
   api.exitLog('Chakra UI Vue is ready');
+  api.exitLog('Join the community on Discord - https://discord.gg/Tv8Jca')
 };

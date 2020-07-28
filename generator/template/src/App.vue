@@ -10,13 +10,17 @@
 </template>
 
 <script>
+<%_ if (!hasChakraLoader) { _%>
 import { CThemeProvider, CReset } from "@chakra-ui/vue";
+ <%_ } _%>
 
 export default {
   name: "App",
+  <%_ if (!hasChakraLoader) { _%>
   components: {
     CThemeProvider,
     CReset
   }
+   <%_ } _%>
 };
 </script> 
